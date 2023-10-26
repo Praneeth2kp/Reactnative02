@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
 });
 app.get('/send-data', (req, res) => {
   const data = 'Hello from server!';
+  console.log("Request Recieved")
   res.send(data);
 });
 const server = http.createServer(app);
