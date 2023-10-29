@@ -12,6 +12,11 @@ app.get('/send-data', (req, res) => {
   console.log("Request Recieved")
   res.send(data);
 });
+
+app.post('/add-data',(req,res)=>{
+  
+})
+
 const server = http.createServer(app);
 const port = 1000;
 server.listen(port, () => console.log(`Listening on ${port}`));
