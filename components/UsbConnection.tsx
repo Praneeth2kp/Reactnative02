@@ -1,7 +1,12 @@
-import React, {useState} from 'react';
-import {Text, View, Button} from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, Button } from 'react-native';
+// import { NativeStackScreenProps } from '@react-navigation/native-stack';
+// import { RootStackParamList } from '../src/App';
 
-const UsbConnect = () => {
+// type USBProps = NativeStackScreenProps<RootStackParamList,'UsbConnect'>
+
+// const UsbConnect = ({navigation}:USBProps) => {
+  const UsbConnect = () => {
   const [isConnected, setIsConnected] = useState(false);
 
   const onUSBConnected = () => {
@@ -17,7 +22,7 @@ const UsbConnect = () => {
       <Text>Is USB connected? {isConnected ? 'Yes' : 'No'}</Text>
       <Button title="Connect" onPress={onUSBConnected} />
       <Button title="Disconnect" onPress={onUSBDisconnected} />
-    </View>
+      </View>
   );
 };
 
